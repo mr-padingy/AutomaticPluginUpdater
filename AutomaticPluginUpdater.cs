@@ -507,6 +507,11 @@ namespace Oxide.Plugins
                     StartSearch(job);
                     return;
                 }
+                if (!job.UseLegacySearch && code == 404)
+                {
+                    Complete(job, "No public uMod manifest found; plugin may be private, removed, or not published on uMod");
+                    return;
+                }
                 Complete(job, sourceName + " failed: HTTP " + code);
                 return;
             }

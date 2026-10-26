@@ -30,6 +30,7 @@
 - Added persistent per-plugin check history so reloads resume without repeating recently completed work.
 - Disabled automatic website polling by default, changed the opt-in routine interval to 24 hours, and added random timing jitter.
 - Replaced normal website searches with uMod's static asset manifests and disabled the legacy website search fallback by default.
+- Reported missing static manifests as unpublished, removed, or private plugins instead of network failures.
 - Added filesystem inventory and update support for unloaded and compile-failed plugins.
 - Excluded Oxide core/interface plugins and plugin subdirectories from update scans.
 - Added source metadata parsing for legacy and extended `[Info]` attribute formats.
